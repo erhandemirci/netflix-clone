@@ -33,7 +33,8 @@ class HomeViewController: UIViewController {
     }
     private func configureNavBar()
     {
-        // fırat
+        var trsay:String="erhan"
+        
         let containerView = UIControl(frame: CGRect.init(x: 0, y: 0, width: 30, height: 30))
             containerView.addTarget(self, action: #selector(handleSearch), for: .touchUpInside)
             let imageSearch = UIImageView(frame: CGRect.init(x: 0, y: 0, width: 30, height: 30))
