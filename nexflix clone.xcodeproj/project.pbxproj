@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		AB79C81F2811E26600EDAE0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB79C81E2811E26600EDAE0C /* AppDelegate.swift */; };
 		AB79C8212811E26600EDAE0C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB79C8202811E26600EDAE0C /* SceneDelegate.swift */; };
-		AB79C8232811E26600EDAE0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB79C8222811E26600EDAE0C /* ViewController.swift */; };
-		AB79C8262811E26600EDAE0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB79C8242811E26600EDAE0C /* Main.storyboard */; };
+		AB79C8232811E26600EDAE0C /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB79C8222811E26600EDAE0C /* MainTabBarViewController.swift */; };
 		AB79C8282811E26800EDAE0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB79C8272811E26800EDAE0C /* Assets.xcassets */; };
 		AB79C82B2811E26800EDAE0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB79C8292811E26800EDAE0C /* LaunchScreen.storyboard */; };
+		AB79C8342811E4E700EDAE0C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB79C8332811E4E700EDAE0C /* HomeViewController.swift */; };
+		AB79C8362811E51700EDAE0C /* UpComingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB79C8352811E51700EDAE0C /* UpComingViewController.swift */; };
+		AB79C8382811E53E00EDAE0C /* SeachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB79C8372811E53E00EDAE0C /* SeachViewController.swift */; };
+		AB79C83A2811E56800EDAE0C /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB79C8392811E56800EDAE0C /* DownloadsViewController.swift */; };
+		AB79C8412811EE8D00EDAE0C /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB79C8402811EE8D00EDAE0C /* CollectionViewTableViewCell.swift */; };
+		AB79C8432811F55B00EDAE0C /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB79C8422811F55B00EDAE0C /* HeroHeaderUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AB79C81B2811E26600EDAE0C /* nexflix clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nexflix clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB79C81E2811E26600EDAE0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB79C8202811E26600EDAE0C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AB79C8222811E26600EDAE0C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AB79C8252811E26600EDAE0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AB79C8222811E26600EDAE0C /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		AB79C8272811E26800EDAE0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB79C82A2811E26800EDAE0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB79C82C2811E26800EDAE0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB79C8332811E4E700EDAE0C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		AB79C8352811E51700EDAE0C /* UpComingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpComingViewController.swift; sourceTree = "<group>"; };
+		AB79C8372811E53E00EDAE0C /* SeachViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeachViewController.swift; sourceTree = "<group>"; };
+		AB79C8392811E56800EDAE0C /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
+		AB79C8402811EE8D00EDAE0C /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
+		AB79C8422811F55B00EDAE0C /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,68 @@
 		AB79C81D2811E26600EDAE0C /* nexflix clone */ = {
 			isa = PBXGroup;
 			children = (
+				AB79C83F2811EE5200EDAE0C /* Managers */,
+				AB79C83E2811EE3F00EDAE0C /* Resources */,
+				AB79C83C2811EDFF00EDAE0C /* Models */,
+				AB79C83B2811EDE600EDAE0C /* Views */,
+				AB79C83D2811EE1400EDAE0C /* ViewModels */,
+				AB79C8322811E4AD00EDAE0C /* Controllers */,
 				AB79C81E2811E26600EDAE0C /* AppDelegate.swift */,
 				AB79C8202811E26600EDAE0C /* SceneDelegate.swift */,
-				AB79C8222811E26600EDAE0C /* ViewController.swift */,
-				AB79C8242811E26600EDAE0C /* Main.storyboard */,
+				AB79C8222811E26600EDAE0C /* MainTabBarViewController.swift */,
 				AB79C8272811E26800EDAE0C /* Assets.xcassets */,
 				AB79C8292811E26800EDAE0C /* LaunchScreen.storyboard */,
 				AB79C82C2811E26800EDAE0C /* Info.plist */,
 			);
 			path = "nexflix clone";
+			sourceTree = "<group>";
+		};
+		AB79C8322811E4AD00EDAE0C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AB79C8332811E4E700EDAE0C /* HomeViewController.swift */,
+				AB79C8352811E51700EDAE0C /* UpComingViewController.swift */,
+				AB79C8372811E53E00EDAE0C /* SeachViewController.swift */,
+				AB79C8392811E56800EDAE0C /* DownloadsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AB79C83B2811EDE600EDAE0C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AB79C8402811EE8D00EDAE0C /* CollectionViewTableViewCell.swift */,
+				AB79C8422811F55B00EDAE0C /* HeroHeaderUIView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AB79C83C2811EDFF00EDAE0C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AB79C83D2811EE1400EDAE0C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AB79C83E2811EE3F00EDAE0C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AB79C83F2811EE5200EDAE0C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +190,6 @@
 			files = (
 				AB79C82B2811E26800EDAE0C /* LaunchScreen.storyboard in Resources */,
 				AB79C8282811E26800EDAE0C /* Assets.xcassets in Resources */,
-				AB79C8262811E26600EDAE0C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +200,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB79C8232811E26600EDAE0C /* ViewController.swift in Sources */,
+				AB79C8232811E26600EDAE0C /* MainTabBarViewController.swift in Sources */,
 				AB79C81F2811E26600EDAE0C /* AppDelegate.swift in Sources */,
+				AB79C8412811EE8D00EDAE0C /* CollectionViewTableViewCell.swift in Sources */,
+				AB79C8432811F55B00EDAE0C /* HeroHeaderUIView.swift in Sources */,
+				AB79C83A2811E56800EDAE0C /* DownloadsViewController.swift in Sources */,
+				AB79C8362811E51700EDAE0C /* UpComingViewController.swift in Sources */,
 				AB79C8212811E26600EDAE0C /* SceneDelegate.swift in Sources */,
+				AB79C8342811E4E700EDAE0C /* HomeViewController.swift in Sources */,
+				AB79C8382811E53E00EDAE0C /* SeachViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AB79C8242811E26600EDAE0C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AB79C8252811E26600EDAE0C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AB79C8292811E26800EDAE0C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -294,7 +354,6 @@
 				INFOPLIST_FILE = "nexflix clone/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -322,7 +381,6 @@
 				INFOPLIST_FILE = "nexflix clone/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
