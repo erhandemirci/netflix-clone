@@ -32,8 +32,11 @@ class TitleCollectionViewCell: UICollectionViewCell {
     }
     public func configure(with model: String)
     {
-        guard let url = URL(string: model) else {return}
-        posterImageView.sd_setImage(with: url, completed: nil)
+        var newmodel = "https://image.tmdb.org/t/p/w500/\(model)"
+        guard let url = URL(string: newmodel) else {return}
+        print(url)
+        
+    posterImageView.sd_setImage(with:url, completed: nil)
         
     }
     
