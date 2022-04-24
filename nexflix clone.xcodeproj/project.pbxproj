@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4651D8239A9835D4BB0C402E /* Pods_nexflix_clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90A315F5F5116E503E2BE20F /* Pods_nexflix_clone.framework */; };
 		AB79C81F2811E26600EDAE0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB79C81E2811E26600EDAE0C /* AppDelegate.swift */; };
 		AB79C8212811E26600EDAE0C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB79C8202811E26600EDAE0C /* SceneDelegate.swift */; };
 		AB79C8232811E26600EDAE0C /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB79C8222811E26600EDAE0C /* MainTabBarViewController.swift */; };
@@ -18,9 +19,15 @@
 		AB79C83A2811E56800EDAE0C /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB79C8392811E56800EDAE0C /* DownloadsViewController.swift */; };
 		AB79C8412811EE8D00EDAE0C /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB79C8402811EE8D00EDAE0C /* CollectionViewTableViewCell.swift */; };
 		AB79C8432811F55B00EDAE0C /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB79C8422811F55B00EDAE0C /* HeroHeaderUIView.swift */; };
+		AB8F33DA2814917B00D8BC62 /* TitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8F33D92814917B00D8BC62 /* TitleCollectionViewCell.swift */; };
+		ABDC18512813429100A40EE0 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC18502813429100A40EE0 /* APICaller.swift */; };
+		ABDC185328134DAD00A40EE0 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC185228134DAD00A40EE0 /* Title.swift */; };
+		ABDC1855281352FC00A40EE0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC1854281352FC00A40EE0 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C50425ED8C11E901CF083A6 /* Pods-nexflix clone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nexflix clone.debug.xcconfig"; path = "Target Support Files/Pods-nexflix clone/Pods-nexflix clone.debug.xcconfig"; sourceTree = "<group>"; };
+		90A315F5F5116E503E2BE20F /* Pods_nexflix_clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nexflix_clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB79C81B2811E26600EDAE0C /* nexflix clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nexflix clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB79C81E2811E26600EDAE0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB79C8202811E26600EDAE0C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +41,11 @@
 		AB79C8392811E56800EDAE0C /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
 		AB79C8402811EE8D00EDAE0C /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 		AB79C8422811F55B00EDAE0C /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
+		AB8F33D92814917B00D8BC62 /* TitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCell.swift; sourceTree = "<group>"; };
+		ABDC18502813429100A40EE0 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		ABDC185228134DAD00A40EE0 /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
+		ABDC1854281352FC00A40EE0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E84468CD02B9AB82D5ADAB8D /* Pods-nexflix clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nexflix clone.release.xcconfig"; path = "Target Support Files/Pods-nexflix clone/Pods-nexflix clone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +53,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4651D8239A9835D4BB0C402E /* Pods_nexflix_clone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A0CCCC1CD57C3A63643E550B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8C50425ED8C11E901CF083A6 /* Pods-nexflix clone.debug.xcconfig */,
+				E84468CD02B9AB82D5ADAB8D /* Pods-nexflix clone.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		AB79C8122811E26600EDAE0C = {
 			isa = PBXGroup;
 			children = (
 				AB79C81D2811E26600EDAE0C /* nexflix clone */,
 				AB79C81C2811E26600EDAE0C /* Products */,
+				A0CCCC1CD57C3A63643E550B /* Pods */,
+				E6EC6842CBA99D78E8B157F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +123,7 @@
 			children = (
 				AB79C8402811EE8D00EDAE0C /* CollectionViewTableViewCell.swift */,
 				AB79C8422811F55B00EDAE0C /* HeroHeaderUIView.swift */,
+				AB8F33D92814917B00D8BC62 /* TitleCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -105,6 +131,7 @@
 		AB79C83C2811EDFF00EDAE0C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				ABDC185228134DAD00A40EE0 /* Title.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -119,6 +146,7 @@
 		AB79C83E2811EE3F00EDAE0C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				ABDC1854281352FC00A40EE0 /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -126,8 +154,17 @@
 		AB79C83F2811EE5200EDAE0C /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				ABDC18502813429100A40EE0 /* APICaller.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		E6EC6842CBA99D78E8B157F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90A315F5F5116E503E2BE20F /* Pods_nexflix_clone.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +174,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AB79C82F2811E26800EDAE0C /* Build configuration list for PBXNativeTarget "nexflix clone" */;
 			buildPhases = (
+				72B2E31FFBE021D4E228F44B /* [CP] Check Pods Manifest.lock */,
 				AB79C8172811E26600EDAE0C /* Sources */,
 				AB79C8182811E26600EDAE0C /* Frameworks */,
 				AB79C8192811E26600EDAE0C /* Resources */,
+				587707227F82152B4BC95B0B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -195,19 +234,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		587707227F82152B4BC95B0B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-nexflix clone/Pods-nexflix clone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-nexflix clone/Pods-nexflix clone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-nexflix clone/Pods-nexflix clone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72B2E31FFBE021D4E228F44B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-nexflix clone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AB79C8172811E26600EDAE0C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				AB79C8232811E26600EDAE0C /* MainTabBarViewController.swift in Sources */,
+				AB8F33DA2814917B00D8BC62 /* TitleCollectionViewCell.swift in Sources */,
 				AB79C81F2811E26600EDAE0C /* AppDelegate.swift in Sources */,
 				AB79C8412811EE8D00EDAE0C /* CollectionViewTableViewCell.swift in Sources */,
+				ABDC18512813429100A40EE0 /* APICaller.swift in Sources */,
 				AB79C8432811F55B00EDAE0C /* HeroHeaderUIView.swift in Sources */,
 				AB79C83A2811E56800EDAE0C /* DownloadsViewController.swift in Sources */,
 				AB79C8362811E51700EDAE0C /* UpComingViewController.swift in Sources */,
+				ABDC1855281352FC00A40EE0 /* Extensions.swift in Sources */,
 				AB79C8212811E26600EDAE0C /* SceneDelegate.swift in Sources */,
 				AB79C8342811E4E700EDAE0C /* HomeViewController.swift in Sources */,
+				ABDC185328134DAD00A40EE0 /* Title.swift in Sources */,
 				AB79C8382811E53E00EDAE0C /* SeachViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +429,7 @@
 		};
 		AB79C8302811E26800EDAE0C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C50425ED8C11E901CF083A6 /* Pods-nexflix clone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -371,6 +457,7 @@
 		};
 		AB79C8312811E26800EDAE0C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E84468CD02B9AB82D5ADAB8D /* Pods-nexflix clone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

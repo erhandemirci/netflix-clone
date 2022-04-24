@@ -7,7 +7,17 @@
 
 import UIKit
 
+enum Sections  : Int {
+    case TrendingMovies = 0
+    case TrendingTv = 1
+    case Popular = 2
+    case Upcoming = 3
+    case topRated = 4
+}
+
 class HomeViewController: UIViewController {
+    
+    let sectionTitles: [String] = ["Trending Movies","Trending TV","Popular", "trending TV", "Top rated"]
     
     private let homeFeedTable: UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
@@ -30,28 +40,31 @@ class HomeViewController: UIViewController {
         let headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
         
         homeFeedTable.tableHeaderView = headerView
+        fetchData()
     }
     private func configureNavBar()
     {
-        var trsay:String="erhan"
+       
+        var image = UIImage(named: "netflixLogo")
+        //image = image?.withRenderingMode(.alwaysOriginal)
+        var imageView=UIImageView(image: image)
+        imageView.translatesAutoresizingMaskIntoConstraints=false
         
-        let containerView = UIControl(frame: CGRect.init(x: 0, y: 0, width: 30, height: 30))
-            containerView.addTarget(self, action: #selector(handleSearch), for: .touchUpInside)
-            let imageSearch = UIImageView(frame: CGRect.init(x: 0, y: 0, width: 30, height: 30))
-            imageSearch.image = UIImage(named: "netflixLogo")
-            containerView.addSubview(imageSearch)
-            let searchBarButtonItem = UIBarButtonItem(customView: containerView)
-            searchBarButtonItem.width = 20
-            navigationItem.rightBarButtonItem = searchBarButtonItem
+        var imageViewConstrait = [
+            imageView.widthAnchor.constraint(equalToConstant: 25),
+            imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor, multiplier: 1),
+           
+        ]
+        NSLayoutConstraint.activate(imageViewConstrait)
+        var barBtnItem = UIBarButtonItem(customView:imageView )
+        navigationItem.leftBarButtonItem = barBtnItem
         
-        /*var image = UIImage(named: "netflixLogo")
-        image = image?.withRenderingMode(.alwaysOriginal)
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .done, target: self, action: nil)
-        */
+        navigationItem.rightBarButtonItems = [
+            UIBarButtonItem(image:UIImage(systemName:"person"), style: .done, target: self, action: nil),
+            UIBarButtonItem(image: UIImage(systemName:"play.rectangle"), style: .done, target: self, action: nil)
         
-    }
-    @objc func handleSearch()
-    {
+        ]
+        navigationController?.navigationBar.tintColor = .white
         
     }
     override func viewDidLayoutSubviews() {
@@ -59,6 +72,24 @@ class HomeViewController: UIViewController {
         homeFeedTable.frame = view.bounds
        print("viewDidLayoutSubviews")
 
+    }
+    private func getTrendingmovies(){
+        APICaller.shared.getTrendingMovies { results in
+            switch results {
+            case .success(let movies):
+                print(movies)
+            case .failure(let error):
+                print(error)
+                
+            }
+        }
+    }
+    private func fetchData(){
+        
+        APICaller.shared.getTopRated { results in
+            
+        }
+    
     }
     
 
@@ -68,7 +99,7 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDataSource , UITableViewDelegate
 {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 20
+        return sectionTitles.count
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -81,13 +112,77 @@ extension HomeViewController: UITableViewDataSource , UITableViewDelegate
             return UITableViewCell()
             
         }
+       
+        switch indexPath.section {
+        case Sections.TrendingMovies.rawValue:
+            APICaller.shared.getTrendingMovies { result in
+             
+                self.configureSwitchFunc(result: result, cell: cell)
+            }
+            
+        case Sections.TrendingTv.rawValue:
+            APICaller.shared.getTrendingTvs { result in
+             
+                self.configureSwitchFunc(result: result, cell: cell)
+            }
+        case Sections.Popular.rawValue:
+            APICaller.shared.getPopular { result in
+             
+                self.configureSwitchFunc(result: result, cell: cell)
+            }
+        case Sections.Upcoming.rawValue:
+            APICaller.shared.getUpcomingMovies { result in
+             
+                self.configureSwitchFunc(result: result, cell: cell)
+            }
+        case Sections.topRated.rawValue:
+            APICaller.shared.getTopRated { result in
+             
+                self.configureSwitchFunc(result: result, cell: cell)
+            }
+        default:
+            return UITableViewCell()
+
+        }
+        
         return cell
+    }
+    func configureSwitchFunc(result: (Result<[Title],Error>), cell: CollectionViewTableViewCell) -> CollectionViewTableViewCell
+    {
+        switch result{
+        case .success(let titles):
+            cell.configure(with: titles)
+        case .failure(let error):
+            print(error.localizedDescription)
+        }
+        return cell
+        
+        
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         200
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         40
+    }
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        guard let header = view as? UITableViewHeaderFooterView else {return}
+        header.textLabel?.font = .systemFont(ofSize: 17, weight: .semibold)
+        header.textLabel?.frame = CGRect(x: header.bounds.origin.x + 20, y: header.bounds.origin.y, width: 100, height: header.bounds.height)
+        header.textLabel?.textColor = .white
+        header.textLabel?.text = header.textLabel?.text?.capitalizeFirstLetter()
+                
+    }
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sectionTitles[section]
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let deffaultOffSet = view.safeAreaInsets.top
+        let offset = scrollView.contentOffset.y + deffaultOffSet
+        navigationController?.navigationBar.transform = .init(translationX: 0, y: min(0,-offset))
+        
+        
     }
     
     
