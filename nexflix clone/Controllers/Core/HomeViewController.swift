@@ -86,9 +86,11 @@ class HomeViewController: UIViewController {
     }
     private func fetchData(){
         
-        APICaller.shared.getTopRated { results in
+        APICaller.shared.getTd(complation: { bilgi in
             
-        }
+            print("erhanbilgi", bilgi)
+            
+        }, name: "erha")
     
     }
     
